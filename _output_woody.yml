@@ -1,0 +1,28 @@
+
+bookdown::gitbook:
+  css: ./style/style.css
+  split_by: section
+  toc_depth: 2
+  config:
+    toc:
+      before: <li><a href="https://www.woody.vip" target="_blank" class="custom-link">巫迪官网</a></li><li><a href="https://www.woody.vip/custom" target="_blank" class="custom-link">巫云网关管理平台</a></li><li><a href="http://47.92.48.56:22223/" target="_blank" class="custom-link">无印版本</a></li>
+    download: ["pdf","docx"]
+
+bookdown::pdf_book:
+  pandoc_args: --listings
+  includes:
+    in_header:
+      - ./style/preamble.tex
+      - ./style/listings-settings.tex
+      - ./style/zhnum.tex
+    before_body:
+      - ./style/title.tex
+      - ./style/before_body.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  toc_appendix: yes
+  keep_tex: yes
+
+bookdown::word_document2:
+  reference_docx: ./style/hust.docx
+  encoding: UTF-8

@@ -1,0 +1,15 @@
+## 系统设置
+
+提供通用的系统设置功能
+
+```{r child=c('function_set/function_set.Rmd')}
+```
+
+```{r child=c('password.Rmd')}
+```
+
+```{r child=c('lisence.Rmd')}
+```
+
+```{r child=c('vpn.Rmd')}
+```

@@ -1,0 +1,18 @@
+# 点位映射
+
+除了PLC可以或部分CNC可以自己设置地址外,本程序内置了大部分常用的点位供用户选择
+
+```{r child=c('fanuc.Rmd')}
+```
+
+```{r child=c('mitsubishi.Rmd')}
+```
+
+```{r child=c('siemens.Rmd')}
+```
+
+```{r child=c('knd.Rmd')}
+```
+
+```{r child=c('brother.Rmd')}
+```

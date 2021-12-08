@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  docdown:
+    image: hub.woody.vip/wuyun/docdown
+    build:
+      args:
+        no_woody: 0
+    ports:
+      - 22222:80
+  docdown_no_woody:
+    image: hub.woody.vip/wuyun/docdown:no_woody
+    build:
+      args:
+        no_woody: 1
+    ports:
+      - 22223:80

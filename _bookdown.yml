@@ -1,0 +1,10 @@
+book_filename: "boxdoc2.0"
+clean: [bookdown.bbl]
+language:
+  ui:
+    edit: "编辑"
+  label:
+    fig: "图 "
+    tab: "表 "
+
+delete_merged_file: true

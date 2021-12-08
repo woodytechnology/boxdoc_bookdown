@@ -1,0 +1,4 @@
+\cleardoublepage
+
+```{r child=c('point_table/README.Rmd')}
+```

@@ -1,0 +1,10 @@
+\cleardoublepage
+
+```{r child=c('api/README.Rmd')}
+```
+
+```{r child=c('api/http.Rmd')}
+```
+
+```{r child=c('api/mqtt.Rmd')}
+```

@@ -1,0 +1,13 @@
+\usepackage{zhlipsum}    % 用于生成随机中文
+% 设置section左对齐，默认是居中
+\CTEXsetup[format={\Large\bfseries},number={\chinese{section}}]{section}
+% 设置章节编号
+\renewcommand\thesection{\chinese{section}、}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+% 设置章节编号与章节标题的距离
+\makeatletter
+\renewcommand\@seccntformat[1]{%
+{\csname the#1\endcsname}\hspace{0.1em}
+}
+\makeatother

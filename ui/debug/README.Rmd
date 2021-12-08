@@ -1,0 +1,12 @@
+## 调试工具
+
+提供一些基本的调试工具,可以用来查看网关状态,以及判断失败原因等
+
+```{r child=c('tools.Rmd')}
+```
+
+```{r child=c('log.Rmd')}
+```
+
+```{r child=c('calculate.Rmd')}
+```

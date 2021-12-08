@@ -1,0 +1,26 @@
+
+bookdown::gitbook:
+  css: ./style/style.css
+  split_by: section
+  toc_depth: 2
+  config:
+    download: ["pdf","docx"]
+
+bookdown::pdf_book:
+  pandoc_args: --listings
+  includes:
+    in_header:
+      - ./style/preamble.tex
+      - ./style/listings-settings.tex
+      - ./style/zhnum.tex
+    before_body:
+      - ./style/title.tex
+      - ./style/before_body.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  toc_appendix: yes
+  keep_tex: yes
+
+bookdown::word_document2:
+  reference_docx: ./style/hust.docx
+  encoding: UTF-8
