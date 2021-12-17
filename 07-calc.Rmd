@@ -28,13 +28,17 @@ end
 
 **注意,如果输入值为数字,则直接输入数字,如果输入值为字符串,则输入带引号的字符串,如果输入值为table,则输入json格式**
 
-![](img/calc-2.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("calc-2.png"))
+```
 
 ### 配置
 
 在采集配置编辑与添加页面选择高级功,可以针对变量配置脚本,如下图,选择对应的变量点击编辑边缘计算,在脚本框输入经过测试的脚本即可
 
-![](img/calc-1.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("calc-1.png"))
+```
 
 ## 设备计算
 
@@ -59,13 +63,17 @@ end
 
 **注意,输入为严格的json格式**
 
-![](img/calc-3.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("calc-3.png"))
+```
 
 ### 配置
 
 在采集配置编辑与添加页面中,将测试过的脚本输入边缘计算框即可,如下图
 
-![](img/calc-4.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("calc-4.png"))
+```
 
 
 ## 内置方法

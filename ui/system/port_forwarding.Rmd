@@ -4,4 +4,6 @@
 * 只支持TCP
 * 外部端口不可修改
 
-![](img/vpn_port-1.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn_port-1.png"))
+```

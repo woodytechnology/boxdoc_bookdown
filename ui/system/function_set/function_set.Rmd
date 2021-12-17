@@ -2,4 +2,6 @@
 
 提供了一些网关扩展功能
 
-![](img/function_set-1.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("function_set-1.png"))
+```

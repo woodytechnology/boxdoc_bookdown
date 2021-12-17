@@ -19,4 +19,7 @@
 也可以把下载的配置文件重新导入到网关
 **切记使用配置导入功能必须重启设备才会生效!!!**
 
-![](img/function_set-2.png)
+
+```{r, results='asis',echo=FALSE}
+cat(get_image("function_set-2.png"))
+```

@@ -10,7 +10,10 @@ if (no_woody=="0"){
 }
 ```
 
-![未授权VPN](img/vpn-1.png)
+
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-1.png","未授权VPN"))
+```
 
 ### 已授权
 
@@ -35,11 +38,16 @@ if (no_woody=="0"){
 
 首页有配置文件和软件,请根据自己的平台选择使用
 
-![](img/vpn-2.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-2.png",public=TRUE))
+```
 
 设备列表页面可以看到自己公司所有设备的状态,列表所示的IP地址即为采集网关的VPN IP地址,可以用这个地址管理网关
 
-![](img/vpn-3.png)
+
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-3.png",public=TRUE))
+```
 
 #### 映射设备使用方法
 
@@ -48,7 +56,9 @@ if (no_woody=="0"){
 
 然后就可实现采集网关到设备的映射,此时在连接了VPN的电脑上可直接对采集网关的VPN IP做机床/PLC上下载功能,即相当于对机床/PLC本身的操作
 
-![](img/vpn-4.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-4.png"))
+```
 
 
 #### 桥接模式使用方法
@@ -57,12 +67,19 @@ if (no_woody=="0"){
 
 本方案的核心为,将机床/PLC与用户置于同一交换机,所以需要用户手动配置IP地址,使网络可达,网络配置方法如下(如果不需要配置IP地址,可以跳过,直接用相关软件进行广播扫描)
 
-![](img/vpn-5.png)<br>
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-5.png"))
+```
+<br>
 
 ##### 机床修改IP地址(推荐)
-* ![](img/vpn-3.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-3.png",public=TRUE))
+```
 
-* ![](img/vpn-6.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-6.png",public=TRUE))
+```
 
 1. 在设备列表页面,点击本次配置的网关的操作列,机床按钮,进入本网关的机床列表
 2. 填加机床后,会给机床分配一个机床IP,这个IP在全网内都是不冲突的,可以安全使用
@@ -89,24 +106,29 @@ netsh interface ip add address "以太网卡名" 192.168.x.x 255.255.255.0
 1. 保证网关能ping通需要映射的设备,并且可以访问到需要转发的端口
 1. 采集网关的VPN页面填加需要映射的IP和端口
 1. 如下图所示,内部端口为自动生成,可以通过本网关的vpn地址加内部端口访问被映射的服务
-![](img/vpn-8.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-8.png"))
+```
 
 #### 路由模式
 
-1. 如下图打开设备控制界面
+* 如下图打开设备控制界面
 
-![](img/vpn-7.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("vpn-7.png"))
+```
 
-1. 启用路由器模式
-1. 保证网关能ping通需要访问的设备
-1. 打开Windows的cmd命令框,需要**管理员模式**输入一下命令
-    ```cmd
-    route add 192.168.1.0 mask 255.255.255.0 10.8.0.22
-    :: 192.168.1.0为需要路由的网段,也可以为单个IP
-    :: 255.255.255.0为需要路由的网段掩码,单个IP用255.255.255.255
-    :: 10.8.0.22 为网关的VPN IP
-    ```
-1. 设置完成即可直接访问设备的内部IP,如以上配置下的192.168.1.x
+* 启用路由器模式
+* 保证网关能ping通需要访问的设备
+* 打开Windows的cmd命令框,需要**管理员模式**输入一下命令
+
+```cmd
+route add 192.168.1.0 mask 255.255.255.0 10.8.0.22
+:: 192.168.1.0为需要路由的网段,也可以为单个IP
+:: 255.255.255.0为需要路由的网段掩码,单个IP用255.255.255.255
+:: 10.8.0.22 为网关的VPN IP
+```
+* 设置完成即可直接访问设备的内部IP,如以上配置下的192.168.1.x
 
 
 #### 特殊网络拓扑

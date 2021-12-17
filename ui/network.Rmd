@@ -1,7 +1,7 @@
 ## 网络配置
 
 * 配置网络之后必须**重启设备**<br>
-* 插4G卡后必须**断电重启**<br>
+* 插SIM卡后必须**断电重启**<br>
 * 如图,根据不同硬件选配,网卡数量不同.
 
 1. 有线网卡可以配置[DHCP(动态获取IP地址)](https://baike.baidu.com/link?url=tMl3o7MU_uQ3t_6RBZS3BqZoqdWuD4TqI_2cSEFTwEpp2C1LXhDn_vqc3tvZgdLQULlKcCJSMHBKSe7-wlvj4_)或静态IP地址.
@@ -10,6 +10,8 @@
 4. 所有网络修改完必须<font color=red>**重启设备**</font>,否则不会生效
 5. 所有网卡的网络配置必须保证IP地址不在同一网段,包括DHCP获取的IP和手动配置的静态IP
 6. eth0 为 net0, eth1 为 net1
-7. 4G网络插卡<font color=red>**断电重启**</font>即可, 无需配置
+7. SIM网络插卡<font color=red>**断电重启**</font>即可, 无需配置
 
-![](img/network.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("network.png","network"))
+```

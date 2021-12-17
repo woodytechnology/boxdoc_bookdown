@@ -10,4 +10,6 @@
 #### 测试授权
 测试授权和商业授权没有本质的区别,唯一的区别是测试授权的有效期自授权日起一个月后就会作废
 
-![](img/lisence.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("lisence.png"))
+```

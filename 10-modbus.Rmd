@@ -4,12 +4,15 @@
 
 如下图,打开网关控制界面,在Modbus服务配置里输入端口(不填默认502)并启用,即可开启Modbus功能
 
-![ModbusServer](img/modbus-1.png)
-
+```{r, results='asis',echo=FALSE}
+cat(get_image("control.png"))
+```
 
 ### 操作方法
 
-![ModbusServer](img/modbus-2.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("modbus-2.png"))
+```
 
 
 1. 点击需要输出到Modbus的变量

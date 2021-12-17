@@ -18,6 +18,24 @@ description: "网关文档"
 
 ```{r, results='asis',echo=FALSE}
 no_woody <- Sys.getenv("NO_WOODY",unset="0")
+hardware <- Sys.getenv("HARDWARE",unset="v6")
+software <- Sys.getenv("SOFTWARE",unset="normal")
+
+get_image<- function(name,title="",public=FALSE) {
+  folder<- "img/"
+  sub_folder<-""
+    if(public){
+      sub_folder="public/"
+    }else{
+      if(software=="CASC"){
+        sub_folder="casc/"
+      }else{
+        sub_folder="normal/"
+      }
+    }
+  return(paste("![",title,"](",folder,sub_folder,name,")",sep=""))
+}
+
 ```
 
 ```{r, results='asis',echo=FALSE}

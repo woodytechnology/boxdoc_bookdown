@@ -2,4 +2,6 @@
 
 本页面可以显示网关的基本负载信息，包括CPU，内存，磁盘，网络等，可以通过右上角的网关信息推送开关，选择是否将网关信息推送到云平台
 
-![网关首页](img/system_info.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("system_info.png","网关首页"))
+```

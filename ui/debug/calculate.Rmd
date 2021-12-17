@@ -1,6 +1,8 @@
 ### 边缘计算调试
 边缘计算可以对网关采集到的数据根据自己的需求进行处理
 
-![](img/debug-6.png)
+```{r, results='asis',echo=FALSE}
+cat(get_image("debug-6.png"))
+```
 
 具体使用方法参照[边缘计算](mqtt.md)

@@ -14,3 +14,12 @@ services:
         no_woody: 1
     ports:
       - 22223:80
+  docdown_yz3420:
+    image: hub.woody.vip/wuyun/docdown:yz3420_casc
+    build:
+      args:
+        hardware: YZ3420
+        software: CASC
+        no_woody: 1
+    ports:
+      - 22224:80
