@@ -18,7 +18,8 @@ description: "网关文档"
 
 ```{r, results='asis',echo=FALSE}
 no_woody <- Sys.getenv("NO_WOODY",unset="0")
-hardware <- Sys.getenv("HARDWARE",unset="v6")
+hardware_ <- Sys.getenv("HARDWARE",unset="V6")
+hardwares<-strsplit(hardware_,split = ",")
 software <- Sys.getenv("SOFTWARE",unset="normal")
 
 get_image<- function(name,title="",public=FALSE) {

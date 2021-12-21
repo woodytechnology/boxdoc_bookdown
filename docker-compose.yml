@@ -3,23 +3,28 @@ services:
   docdown:
     image: hub.woody.vip/wuyun/docdown
     build:
+      context: .
       args:
+        hardware: V6,HW701
         no_woody: 0
     ports:
       - 22222:80
   docdown_no_woody:
     image: hub.woody.vip/wuyun/docdown:no_woody
     build:
+      context: .
       args:
+        hardware: V6,HW701
         no_woody: 1
     ports:
       - 22223:80
-  docdown_yz3420:
-    image: hub.woody.vip/wuyun/docdown:yz3420_casc
-    build:
-      args:
-        hardware: YZ3420
-        software: CASC
-        no_woody: 1
-    ports:
-      - 22224:80
+#  docdown_yz3420:
+#    image: hub.woody.vip/wuyun/docdown:yz3420_casc
+#    build:
+#      context: .
+#      args:
+#        hardware: YZ3420
+#        software: CASC
+#        no_woody: 1
+#    ports:
+#      - 22224:80
