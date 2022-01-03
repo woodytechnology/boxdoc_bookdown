@@ -1,0 +1,45 @@
+## Haas 点位地址
+
+### 内置点位
+
+| 点位名称 | 点位地址 | 描述 | 数据类型 |
+| -- | -- | -- | -- | -- |
+| 加工零件数 | cnc_products | cnc生产件数 | Number |
+| 加工零件数2 | cnc_products2 | cnc生产件数2 | Number |
+| 绝对坐标 | cnc_ablpos | 编程前会指定一个原点，建立坐标系 | List[Object] |
+| 机械坐标 | cnc_mecpos | 机床厂家设定的坐标系 | List[Object] |
+| CNC版本 | cnc_version | CNC版本 | String |
+| CNC的IP地址 | cnc_ip | CNC的IP地址 | String |
+| CNC ID | cnc_id | CNC ID | String |
+| 切削倍率 | cnc_frate | 操作面板上进给倍率旋钮对应数值 | Number |
+| 当前刀具号 | cnc_toolnum | 当前加工主轴上的刀具编号 | Number |
+| 主轴实际转速S | cnc_actspeed | 加工中主轴实际转速 | Number |
+| 当前所处运行模式 | cnc_runstatus | 当前设备运行状态 | Enum |
+| 执行的NC主程序号 | cnc_mainproname | cnc当前加工执行的主程序号 | String |
+| 开机时间 | cnc_alivetime | 数控系统工作时间 秒 | Number |
+| 运行时间 | cnc_runtime | 加工程序运行总时间 秒| Number |
+| 切削时间 | cnc_cuttime | 加工总时间 秒| Number |
+| 循环时间 | cnc_cycletime | 单次加工时间 秒| Number |
+
+
+
+### 添加点位
+
+| 变量类型 | 变量名示例 | 变量地址示例 | 数据类型 |
+| -- | -- | -- | -- | -- |
+| 宏变量 | macro1 | 100 | Number |
+
+### 数据字典
+
+#### 运行状态
+
+cnc_runstatus
+
+``` json
+{
+    "STATUS BUSY":0,
+    "IDLE":1,
+    "STOP":2,
+    "ALARM ON":4,
+}
+```

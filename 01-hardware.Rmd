@@ -10,6 +10,8 @@ for (hardware in unlist(hardwares)) {
     res<- knitr::knit_child("hardware/hw701.Rmd", quiet = TRUE, envir = environment())
   }else if (hardware=="V6"){
     res<- knitr::knit_child("hardware/v6.Rmd", quiet = TRUE, envir = environment())
+  }else if (hardware=="YZ2420"){
+    res<- knitr::knit_child("hardware/yz2420.Rmd", quiet = TRUE, envir = environment())
   }
   cat(res, sep = '\n')
 }

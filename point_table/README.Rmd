@@ -16,3 +16,6 @@
 
 ```{r child=c('brother.Rmd')}
 ```
+
+```{r child=c('haas.Rmd')}
+```
